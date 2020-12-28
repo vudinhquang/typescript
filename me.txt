@@ -18,4 +18,5 @@ Function
     Rest params
 Arrow Function
     Arrow Functions 1
+    Arrow Functions 2
     
