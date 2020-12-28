@@ -1,3 +1,8 @@
                                                 ECMAScript
                                                 
 Init 
+Variable - Template String - Spread - Destructing
+    Let vs var 1
+        If using let In Block as FOR, IF, WHILE
+            -> Can not access value outer of block 
+    
