@@ -24,4 +24,5 @@ Arrow Function
 Enhanced
 OOP 
     Class
+    Inheritance
     
