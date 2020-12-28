@@ -22,4 +22,6 @@ Arrow Function
     This
         .bind(this)
 Enhanced
+OOP 
+    Class
     
