@@ -1,6 +1,8 @@
                                                 ECMAScript
                                                 
 Init 
+    http://es6-features.org/#Constants
+    https://kangax.github.io/compat-table/es6/
 Variable - Template String - Spread - Destructing
     Let vs var 1
         If using let In Block as FOR, IF, WHILE
@@ -9,4 +11,5 @@ Variable - Template String - Spread - Destructing
     Const
     Template String
     For 
+    Spread
     
