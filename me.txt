@@ -25,4 +25,10 @@ Enhanced
 OOP 
     Class
     Inheritance
-    
+
+============================================================================================
+
+                                    Ngôn ngữ TypeScript
+
+Typescript
+  
