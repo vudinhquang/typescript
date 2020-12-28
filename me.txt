@@ -8,4 +8,5 @@ Variable - Template String - Spread - Destructing
     Let vs var 2
     Const
     Template String
+    For 
     
