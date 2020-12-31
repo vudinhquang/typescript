@@ -36,4 +36,7 @@ Chương trình TypeScript đầu tiên
         https://www.typescriptlang.org/
     Install TypeScript
         npm install -g typescript
+    Compile
+        tsc greeter.ts
+        tsc greeter -w
     
