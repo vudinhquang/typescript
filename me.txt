@@ -39,4 +39,8 @@ Chương trình TypeScript đầu tiên
     Compile
         tsc greeter.ts
         tsc greeter -w
+        w: watch
+    tsconfig
+        Compile: tsc 
+        exclude: Chứa các folder không cần biên dịch 
     
