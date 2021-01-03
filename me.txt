@@ -48,4 +48,5 @@ Variable & Data Type
     Array
     Tuple
     Enum
+    Any
     
