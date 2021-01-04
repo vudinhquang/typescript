@@ -53,4 +53,6 @@ Variable & Data Type
     Type assertions
     Interface object
     Interface array
+Functions
+    Return
     
