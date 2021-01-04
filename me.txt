@@ -56,4 +56,5 @@ Variable & Data Type
 Functions
     Return
     Param 1
+    Param 2
     
