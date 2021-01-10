@@ -1,12 +1,13 @@
-/// <reference path="Validation.ts" />
-/// <reference path="LettersOnlyValidator.ts" />
-/// <reference path="ZipCodeValidator.ts" />
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const ZipCodeValidator_1 = require("./ZipCodeValidator");
+const LettersOnlyValidator_1 = require("./LettersOnlyValidator");
 // Some samples to try
 let strings = ["Hello", "98052", "101"];
 // Validators to use
 let validators = {};
-validators["ZIP code"] = new Validation.ZipCodeValidator();
-validators["Letters only"] = new Validation.LettersOnlyValidator();
+validators["ZIP code"] = new ZipCodeValidator_1.ZipCodeValidator();
+validators["Letters only"] = new LettersOnlyValidator_1.LettersOnlyValidator();
 // Show whether each string passed each validator
 for (let s of strings) {
     for (let name in validators) {

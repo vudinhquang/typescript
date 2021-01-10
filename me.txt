@@ -76,4 +76,13 @@ Generic
     Class
 Module & Namepace
     Basic
+    Module 1
+        system js
+        https://github.com/systemjs/systemjs
+        -> system.js
+		<script>
+			System.defaultJSExtensions = true;
+			System.import('./mjs/07_module/Test');
+		</script>
+        Thư viện systemjs là 1 Module Loader giúp kéo vào các Module được biên dịch bởi typescript
     
