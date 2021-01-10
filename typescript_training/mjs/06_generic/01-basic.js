@@ -1,10 +1,15 @@
-function showNumberInfo(x) {
+/*
+function showNumberInfo(x : number) : number {
     return x;
 }
-function showStringInfo(x) {
+
+function showStringInfo(x : string) : string {
     return x;
 }
-function showInfo(x) {
+
+function showInfo<T>(x : T) : T {
     return x;
 }
-showInfo(true);
+
+showInfo<boolean>(true);
+*/ 

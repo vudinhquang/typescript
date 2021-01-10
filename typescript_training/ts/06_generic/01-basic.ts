@@ -1,3 +1,4 @@
+/*
 function showNumberInfo(x : number) : number {
 	return x;
 }
@@ -11,3 +12,4 @@ function showInfo<T>(x : T) : T {
 }
 
 showInfo<boolean>(true);
+*/

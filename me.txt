@@ -74,4 +74,6 @@ Generic
     Basic
     Method
     Class
+Module & Namepace
+    Basic
     
