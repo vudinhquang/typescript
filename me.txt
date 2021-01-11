@@ -89,3 +89,10 @@ Module & Namepace
         amd -> Module Loader require.js
     Import Export
     
+============================================================================================
+
+                                    Xây dựng ứng dụng Shopping Cart
+    
+Xây dựng cấu trúc thư mục và tạo giao diện với Bootstrap
+    Project structure
+    
