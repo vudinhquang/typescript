@@ -85,4 +85,6 @@ Module & Namepace
 			System.import('./mjs/07_module/Test');
 		</script>
         Thư viện systemjs là 1 Module Loader giúp kéo vào các Module được biên dịch bởi typescript
+    Module 2
+        amd -> Module Loader require.js
     
