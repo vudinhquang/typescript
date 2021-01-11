@@ -2,7 +2,9 @@ import { StringValidator } from "./Validation";
 import { ZipCodeValidator } from "./ZipCodeValidator";
 import { LettersOnlyValidator } from "./LettersOnlyValidator";
 
+import * as MModule from "./MModule";
 
+/*
 // Some samples to try
 let strings = ["Hello", "98052", "101"];
 
@@ -21,3 +23,10 @@ for (let s of strings) {
         );
     }
 }
+*/
+
+let obj = new MModule.Abc();
+obj.showInfo();
+console.log("123");
+
+MModule.printAbc();
