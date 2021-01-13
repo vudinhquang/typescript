@@ -5,7 +5,16 @@ export class Product {
 	private _image: string;
 	private _summary: string;
 	private _price: number;
-    private _canBuy: boolean;
+	private _canBuy: boolean;
+	
+	constructor(id: number, name: string, image: string, summary: string, price: number, canBuy: boolean = true){
+		this.id = id;
+		this.name = name;
+		this.image = image;
+		this.summary = summary;
+		this.price = price;
+		this.canBuy = canBuy;
+	}
     
 	public get id() : number {
 		return this._id;
