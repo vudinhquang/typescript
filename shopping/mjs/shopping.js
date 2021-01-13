@@ -31,4 +31,9 @@ jQuery(function () {
     showListProduct();
     showCart();
     showNotification(MNotification.NOTI_READY_TO_BUY);
+    // Buy Product
+    $("a.price").on("click", function () {
+        let id = $(this).data("product");
+        let quantity = +$("input[name='quantity-product-" + id + "']").val();
+    });
 });
