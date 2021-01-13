@@ -3,5 +3,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const product_repository_1 = require("./product-repository");
 let productRepository = new product_repository_1.ProductRepository();
 let products = productRepository.getItems();
-let productItem = productRepository.getItemByID(100);
-console.log(productItem);
+console.log(productRepository.showItemsInHTML());
