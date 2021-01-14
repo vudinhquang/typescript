@@ -30,7 +30,7 @@ function showNotification(str) {
 // Hiển thị giỏ hàng:
 function showCart() {
     $(MElement.ELM_CART_BODY).html(cartObj.showCartBodyInHTML());
-    $(MElement.ELM_CART_FOOTER).html("");
+    $(MElement.ELM_CART_FOOTER).html(cartObj.showCartFooterInHTML());
 }
 // Add Product
 function addProduct(id, quantity) {

@@ -1,5 +1,6 @@
 import { CartItem } from './cart-item';
 import { Product } from './product';
+import { Helpers } from './libs/helpers';
 
 export class Cart {
 	private cartItems: CartItem[] = [];
@@ -37,13 +38,23 @@ export class Cart {
 		return (this.cartItems.length == 0);
 	}
 
+	/*
 	public getTotalQuantity () : number {
-		return 1;
+		let total : number = 0;
+		this.cartItems.forEach((cartItem : CartItem) => {
+			total += cartItem.quantity;
+		});
+		return total;
 	}
 
 	public getTotalPrice () : number {
-		return 1;
+		let total : number = 0;
+		this.cartItems.forEach((cartItem : CartItem) => {
+			total += cartItem.quantity * cartItem.product.price;
+		});
+		return total;
 	}
+	*/
 	
 	public showCartBodyInHTML () : string {
 		let xhtmlResult : string = ``;
@@ -58,6 +69,13 @@ export class Cart {
 	}
 
 	public showCartFooterInHTML () : string {
-		return "";
+		let xhtmlResult : string = `<tr><th colspan="6">Empty product in your cart</th></tr>`;
+		if(!this.isEmpty()) {
+			xhtmlResult = `<tr>
+								<td colspan="4">There are <b>${ this.totalQuantity }</b> items in your shopping cart.</td>
+								<td colspan="2" class="total-price text-left">${ Helpers.toCurrency(this.totalPrice, "USD", "right") }</td>
+							</tr>`;
+		}
+		return xhtmlResult;
 	}
 }

@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Cart = void 0;
 const cart_item_1 = require("./cart-item");
+const helpers_1 = require("./libs/helpers");
 class Cart {
     constructor() {
         this.cartItems = [];
@@ -34,12 +35,23 @@ class Cart {
     isEmpty() {
         return (this.cartItems.length == 0);
     }
-    getTotalQuantity() {
-        return 1;
+    /*
+    public getTotalQuantity () : number {
+        let total : number = 0;
+        this.cartItems.forEach((cartItem : CartItem) => {
+            total += cartItem.quantity;
+        });
+        return total;
     }
-    getTotalPrice() {
-        return 1;
+
+    public getTotalPrice () : number {
+        let total : number = 0;
+        this.cartItems.forEach((cartItem : CartItem) => {
+            total += cartItem.quantity * cartItem.product.price;
+        });
+        return total;
     }
+    */
     showCartBodyInHTML() {
         let xhtmlResult = ``;
         if (!this.isEmpty()) {
@@ -52,7 +64,14 @@ class Cart {
         return xhtmlResult;
     }
     showCartFooterInHTML() {
-        return "";
+        let xhtmlResult = `<tr><th colspan="6">Empty product in your cart</th></tr>`;
+        if (!this.isEmpty()) {
+            xhtmlResult = `<tr>
+								<td colspan="4">There are <b>${this.totalQuantity}</b> items in your shopping cart.</td>
+								<td colspan="2" class="total-price text-left">${helpers_1.Helpers.toCurrency(this.totalPrice, "USD", "right")}</td>
+							</tr>`;
+        }
+        return xhtmlResult;
     }
 }
 exports.Cart = Cart;
