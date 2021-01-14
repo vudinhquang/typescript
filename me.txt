@@ -119,4 +119,6 @@ Xây dựng chức năng Add sản phẩm vào giỏ hàng
 Xây dựng chức năng Update số lượng sản phẩm
     Shop - updateProduct
     Cart - updateProduct
+Xây dựng chức năng Delete sản phẩm
+    RemoveProduct
     
