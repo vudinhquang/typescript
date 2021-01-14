@@ -27,7 +27,7 @@ export class Cart {
 	}
 
 	public updateProduct (product: Product, quantity: number = 1) :void {
-
+		console.log(product, quantity);
 	}
 
 	public removeProduct (product: Product) : void {
