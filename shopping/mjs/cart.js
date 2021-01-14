@@ -41,7 +41,15 @@ class Cart {
         return 1;
     }
     showCartBodyInHTML() {
-        return "";
+        let xhtmlResult = ``;
+        if (!this.isEmpty()) {
+            let total = this.cartItems.length;
+            for (let i = 0; i < total; i++) {
+                let cartItemCurrent = this.cartItems[i];
+                xhtmlResult += cartItemCurrent.showCartItemInHTML(i + 1);
+            }
+        }
+        return xhtmlResult;
     }
     showCartFooterInHTML() {
         return "";

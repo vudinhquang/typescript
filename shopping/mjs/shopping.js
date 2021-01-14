@@ -14,6 +14,7 @@ var MNotification;
 (function (MNotification) {
     MNotification.NOTI_READY_TO_BUY = "Ready to buy product";
     MNotification.NOTI_GREATER_THAN_ONE = "Quantity must equal or greater than 1";
+    MNotification.NOTI_ACT_ADD = "Added successfull !!";
 })(MNotification || (MNotification = {}));
 let productRepository = new product_repository_1.ProductRepository();
 let cartObj = new cart_1.Cart();
@@ -28,7 +29,7 @@ function showNotification(str) {
 }
 // Hiển thị giỏ hàng:
 function showCart() {
-    $(MElement.ELM_CART_BODY).html("");
+    $(MElement.ELM_CART_BODY).html(cartObj.showCartBodyInHTML());
     $(MElement.ELM_CART_FOOTER).html("");
 }
 // Add Product
@@ -36,6 +37,8 @@ function addProduct(id, quantity) {
     if (validate_1.Validate.checkQuantity(quantity)) {
         let product = productRepository.getItemByID(id);
         cartObj.addProduct(product, quantity);
+        showCart();
+        showNotification(MNotification.NOTI_ACT_ADD);
     }
     else {
         showNotification(MNotification.NOTI_GREATER_THAN_ONE);

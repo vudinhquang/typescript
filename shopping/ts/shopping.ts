@@ -13,6 +13,7 @@ namespace MElement {
 namespace MNotification {
     export const NOTI_READY_TO_BUY : string = "Ready to buy product";
     export const NOTI_GREATER_THAN_ONE : string = "Quantity must equal or greater than 1";
+    export const NOTI_ACT_ADD : string = "Added successfull !!";
 }
 
 let productRepository = new ProductRepository();
@@ -31,7 +32,7 @@ function showNotification(str: string) : void{
 
 // Hiển thị giỏ hàng:
 function showCart() : void{
-	$(MElement.ELM_CART_BODY).html("");
+    $(MElement.ELM_CART_BODY).html(cartObj.showCartBodyInHTML());
 	$(MElement.ELM_CART_FOOTER).html("");
 }
 
@@ -39,7 +40,9 @@ function showCart() : void{
 function addProduct(id : number, quantity : number) {
     if(Validate.checkQuantity(quantity)){
 		let product : Product = productRepository.getItemByID(id);
-		cartObj.addProduct (product, quantity);
+        cartObj.addProduct (product, quantity);
+        showCart();
+        showNotification(MNotification.NOTI_ACT_ADD);
     } else {
         showNotification(MNotification.NOTI_GREATER_THAN_ONE);
     }
