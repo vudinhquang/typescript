@@ -118,4 +118,5 @@ Xây dựng chức năng Add sản phẩm vào giỏ hàng
     ShowCartFooterInHTML
 Xây dựng chức năng Update số lượng sản phẩm
     Shop - updateProduct
+    Cart - updateProduct
     
